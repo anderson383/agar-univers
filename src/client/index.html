@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Agar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+    <div id="gameAreaWrapper">
+        <div id="status"><span class="title">Tablero</span></div>
+        <div class="chatbox" id="chatbox" style="display: none;">
+            <ul id="chatList" class="chat-list"></ul>
+            <input id="chatInput" type="text" class="chat-input" placeholder="Chat here..." maxlength="35" />
+        </div>
+        <div id="mobile">
+           <input type="image" id="split" class="split" src="img/split.png" alt="splitBtn">
+           <input type="image" id="feed" class="feed" src="img/feed.png" alt="feedBtn">
+        </div>
+        <canvas tabindex="1" id="cvs"></canvas>
+    </div>
+    <div id="startMenuWrapper">
+        <div id="startMenu">
+            <p>Agario</p>
+            <input type="text" tabindex="0" autofocus placeholder="Escribe tu nombre" id="playerNameInput" maxlength="25" />
+            <b class="input-error">Sin caracteres especiales</b>
+            <br />
+            <a onclick="document.getElementById('spawn_cell').play();"><button id="startButton">Jugar</button></a>
+            <br />
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script  type="module" src="./bin/client/js/app.js"></script>
+</body>
+</html>
