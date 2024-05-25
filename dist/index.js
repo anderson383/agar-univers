@@ -1217,7 +1217,7 @@ setInterval(sendUpdates, 1000 / config.networkUpdateFactor);
 // app.put("/editar/:id", UsuariosEditarController);
 // app.delete("/eliminar/:id", UsuariosEliminarController);
 // app.get("/detalle/:id", UsuariosDetalleController);
-const port = 3000;
+const port = process.env.PORT;
 http.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);
 });

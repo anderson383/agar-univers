@@ -1398,7 +1398,7 @@ setInterval(sendUpdates, 1000 / config.networkUpdateFactor);
 // app.get("/detalle/:id", UsuariosDetalleController);
 
 
-const port = 3000;
+const port = process.env.PORT;
 http.listen(port, () => {
   console.log(`Servidor escuchando en http://localhost:${port}`);
 });
